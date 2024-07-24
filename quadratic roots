@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class quadratic {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        double root1=0,root2=0;
+        System.out.println("Enter the value of a:");
+        double a=sc.nextDouble();
+        System.out.println("Enter the value of b:");
+        double b=sc.nextDouble();
+        System.out.println("Enter the value of c:");
+        double c=sc.nextDouble();
+        double discriminant=(b*b)-4*a*c;
+        double D=Math.sqrt(discriminant);
+        root1=(-b+D)/2*a;
+        root2=(-b-D)/2*a;
+        if(D>0){
+        	System.out.println("Roots are"+root1+"and"+root2);
+        	System.out.println("Given roots are real and distinct");
+       	}
+       	else if(D==0){
+       		System.out.println("Roots are"+root1+"and"+root2);
+       		System.out.println("Given roots are real and equal");
+       	}
+       	else
+       		System.out.println("Given roots are imaginary");
+    }
+    
+}
